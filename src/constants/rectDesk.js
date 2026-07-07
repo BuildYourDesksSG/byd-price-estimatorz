@@ -28,6 +28,18 @@ export const MFC_COLOURS = [
 
 // 🔴 CHANGE BELOW — FINAL MDF COLOUR LIST (10 colours)
 export const MDF_COLOURS = [
+  {
+    id: 'pearl-white',
+    name: 'Pearl White',
+    hex: '#F4F1EA',
+    image: 'images/swatches/mdf-pearl-white.jpg',
+  },
+  {
+    id: 'white-oak',
+    name: 'White Oak',
+    hex: '#E3D5BD',
+    image: 'images/swatches/mdf-white-oak.jpg',
+  },
   { id: 'pear-hue', name: 'Pear Hue', hex: '#D9C49A', image: 'images/swatches/mdf-pear-hue.jpg' },
   {
     id: 'natural-oak',
@@ -35,11 +47,18 @@ export const MDF_COLOURS = [
     hex: '#C7A874',
     image: 'images/swatches/mdf-natural-oak.jpg',
   },
+  { id: 'ash-grey', name: 'Ash Grey', hex: '#A8A099', image: 'images/swatches/mdf-ash-grey.jpg' },
   {
     id: 'amber-cherry',
     name: 'Amber Cherry',
     hex: '#7A3020',
     image: 'images/swatches/mdf-amber-cherry.jpg',
+  },
+  {
+    id: 'light-walnut',
+    name: 'Light Walnut',
+    hex: '#9A7050',
+    image: 'images/swatches/mdf-light-walnut.jpg',
   },
   {
     id: 'dark-walnut',
@@ -53,25 +72,6 @@ export const MDF_COLOURS = [
     hex: '#2A2422',
     image: 'images/swatches/mdf-carbon-black.jpg',
   },
-  {
-    id: 'light-walnut',
-    name: 'Light Walnut',
-    hex: '#9A7050',
-    image: 'images/swatches/mdf-light-walnut.jpg',
-  },
-  {
-    id: 'white-oak',
-    name: 'White Oak',
-    hex: '#E3D5BD',
-    image: 'images/swatches/mdf-white-oak.jpg',
-  },
-  {
-    id: 'pearl-white',
-    name: 'Pearl White',
-    hex: '#F4F1EA',
-    image: 'images/swatches/mdf-pearl-white.jpg',
-  },
-  { id: 'ash-grey', name: 'Ash Grey', hex: '#A8A099', image: 'images/swatches/mdf-ash-grey.jpg' },
   {
     id: 'black-oak',
     name: 'Black Oak',
