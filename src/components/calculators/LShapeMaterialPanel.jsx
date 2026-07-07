@@ -253,7 +253,7 @@ export default function LShapeMaterialPanel({ materialKey }) {
           selected={colour}
           onSelect={setColour}
           showRate={isSpecies}
-          columns={isSpecies ? 4 : undefined}
+          columns={isSpecies ? 4 : 5}
         />
         {isSpecies && (
           <div style={{ marginTop: 14 }}>
