@@ -195,7 +195,7 @@ export default function RectCalculator() {
                 borderRadius: 12,
                 padding: 14,
                 transition: 'all 0.15s',
-                boxShadow: edge === e.id ? `0 0 0 1px ${T.brand}25` : 'none',
+                boxShadow: edge === e.id ? `0 0 0 1px ${T.brand}25` : '0 0 0 1px transparent',
               }}
             >
               <div
