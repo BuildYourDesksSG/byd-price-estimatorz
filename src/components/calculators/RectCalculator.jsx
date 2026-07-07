@@ -362,7 +362,7 @@ export default function RectCalculator() {
         <>
           <Card>
             <SectionLabel>MDF Colour</SectionLabel>
-            <ColourSwatchGrid colours={MDF_COLOURS} selected={colour} onSelect={setColour} />
+            <ColourSwatchGrid colours={MDF_COLOURS} selected={colour} onSelect={setColour} columns={5} />
           </Card>
 
           <Card>

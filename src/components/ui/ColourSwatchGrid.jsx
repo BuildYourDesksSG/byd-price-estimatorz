@@ -1,11 +1,13 @@
 import { T } from '../../constants/tokens'
 
-export default function ColourSwatchGrid({ colours, selected, onSelect, showRate }) {
+export default function ColourSwatchGrid({ colours, selected, onSelect, showRate, columns }) {
   return (
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill,minmax(88px,1fr))',
+        gridTemplateColumns: columns
+          ? `repeat(${columns},minmax(0,1fr))`
+          : 'repeat(auto-fill,minmax(88px,1fr))',
         gap: 10,
       }}
     >
