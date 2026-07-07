@@ -1,0 +1,17 @@
+export const T = {
+  bg: '#FAF6F0',
+  bgAlt: '#EFE6D9',
+  bgCard: '#FFFFFF',
+  bgDark: '#2A1507',
+  text: '#1C0D06',
+  textMute: '#6B6258',
+  textOnDark: '#FAF6F0',
+  border: '#E5DED2',
+  brand: '#6B4530',
+  brandSoft: '#8B5E3C',
+  brandTint: '#F3EAE0',
+  good: '#2E7D4F',
+  warn: '#B23A2E',
+  font: "Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif",
+  fontSerif: "'Playfair Display',Georgia,'Times New Roman',serif",
+}
