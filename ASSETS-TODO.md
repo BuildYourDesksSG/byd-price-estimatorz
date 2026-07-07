@@ -3,15 +3,10 @@
 The code wiring is in place for everything below; these are the inputs only BYD can provide.
 
 ## 1. New Add-On product images (#14, #23, #24)
-DONE — supplied by client and processed into uniform white-background PNGs (240×160)
-in `public/images/accessories/`:
-`monitor-arm-single.png`, `monitor-arm-dual.png`, `cpu-mount.png`, `cable-organiser.png`,
+DONE — all eight supplied by client and processed into uniform white-background PNGs
+(240×160) in `public/images/accessories/`: `monitor-arm-single.png`, `monitor-arm-dual.png`,
+`cpu-mount.png`, `cable-organiser.png`, `ergo-chair.png`, `warranty.png`,
 `frame-stabilizer.png`, `anti-wobble.png`.
-
-Still outstanding:
-- `ergo-chair.png` — Ergonomic Chair (Ergo 608) image not yet provided.
-- `warranty.png` — Extended Warranty has no product photo (intangible); it currently shows
-  no thumbnail, which is fine unless you want a small icon there.
 
 ## 2. Beech wood (#7)
 In `src/constants/lshapeDesk.js`, the `beech` species has a **placeholder rate of 330**.

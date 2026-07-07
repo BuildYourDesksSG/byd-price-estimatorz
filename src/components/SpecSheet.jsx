@@ -368,7 +368,8 @@ export default function SpecSheet({ spec }) {
   return (
     <div
       style={{
-        width: 700,
+        width: '100%',
+        maxWidth: 700,
         background: T.bgCard,
         fontFamily: T.font,
         border: `1px solid ${T.border}`,

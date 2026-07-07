@@ -10,7 +10,7 @@ export default function App() {
   const [type, setType] = useState('rect')
 
   return (
-    <div style={{ maxWidth: 800, margin: '0 auto', padding: '48px 20px 40px' }}>
+    <div style={{ maxWidth: 800, margin: '0 auto', padding: 'clamp(28px,6vw,48px) clamp(16px,5vw,20px) 40px' }}>
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: 48 }}>
         {/* Logo mark */}
@@ -43,7 +43,7 @@ export default function App() {
         <div
           style={{
             fontFamily: T.fontSerif,
-            fontSize: 42,
+            fontSize: 'clamp(30px,8vw,42px)',
             fontWeight: 700,
             fontStyle: 'italic',
             color: T.text,

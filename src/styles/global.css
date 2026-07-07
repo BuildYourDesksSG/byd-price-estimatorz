@@ -65,3 +65,13 @@ input[type='range']::-moz-range-thumb {
   border: none;
   box-shadow: 0 0 0 3px rgba(107, 69, 48, 0.15);
 }
+
+/* --- Responsive safety: never allow sideways scroll on mobile --- */
+html,
+body {
+  overflow-x: hidden;
+}
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}

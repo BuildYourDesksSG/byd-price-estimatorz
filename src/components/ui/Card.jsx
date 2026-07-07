@@ -7,7 +7,7 @@ export default function Card({ children, style = {} }) {
         background: T.bgCard,
         border: `1px solid ${T.border}`,
         borderRadius: 16,
-        padding: 24,
+        padding: 'clamp(16px,4vw,24px)',
         boxShadow: '0 4px 24px rgba(0,0,0,0.35), 0 1px 4px rgba(0,0,0,0.25)',
         ...style,
       }}
