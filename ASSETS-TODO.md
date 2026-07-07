@@ -10,7 +10,7 @@ DONE — all eight supplied by client and processed into uniform white-backgroun
 
 ## 2. Beech wood (#7)
 In `src/constants/lshapeDesk.js`, the `beech` species has a **placeholder rate of 330**.
-Replace it with the confirmed $/m², and add a swatch at `public/images/swatches/wood-beech.jpg`.
+Replace it with the confirmed $/m². (Swatch image wood-beech.jpg is now supplied.)
 
 ## 3. MDF swatch grain orientation (#21)
 The MDF colour swatches in `public/images/swatches/mdf-*.jpg` should be re-exported/rotated so

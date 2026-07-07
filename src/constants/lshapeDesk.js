@@ -44,7 +44,7 @@ export const LSHAPE_MFC_COLOURS = [
 // 🔴 CHANGE BELOW — SOLID WOOD SPECIES & RATES
 export const SOLID_WOOD_SPECIES = [
   // 🔴 #7 BEECH — rate is a PLACEHOLDER. Replace `rate` with BYD's confirmed
-  //    $/m² and add a swatch image at /images/swatches/wood-beech.jpg.
+  //    $/m² (swatch image wood-beech.jpg now supplied).
   {
     id: 'beech',
     name: 'European Beech',
