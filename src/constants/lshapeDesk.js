@@ -43,13 +43,6 @@ export const LSHAPE_MFC_COLOURS = [
 
 // 🔴 CHANGE BELOW — SOLID WOOD SPECIES & RATES
 export const SOLID_WOOD_SPECIES = [
-  {
-    id: 'redoak',
-    name: 'American Red Oak',
-    rate: 310,
-    hex: '#C8975A',
-    image: 'images/swatches/wood-red-oak.jpg',
-  },
   // 🔴 #7 BEECH — rate is a PLACEHOLDER. Replace `rate` with BYD's confirmed
   //    $/m² and add a swatch image at /images/swatches/wood-beech.jpg.
   {
@@ -60,18 +53,11 @@ export const SOLID_WOOD_SPECIES = [
     image: 'images/swatches/wood-beech.jpg',
   },
   {
-    id: 'smokedoak',
-    name: 'Smoked Red Oak',
-    rate: 375,
-    hex: '#5A4030',
-    image: 'images/swatches/wood-smoked-red-oak.jpg',
-  },
-  {
-    id: 'cherry',
-    name: 'American Cherry Wood',
-    rate: 400,
-    hex: '#8B4A35',
-    image: 'images/swatches/wood-cherry.jpg',
+    id: 'maple',
+    name: 'Canadian Hard Maple',
+    rate: 450,
+    hex: '#E8D9B5',
+    image: 'images/swatches/wood-maple.jpg',
   },
   {
     id: 'ash',
@@ -81,13 +67,6 @@ export const SOLID_WOOD_SPECIES = [
     image: 'images/swatches/wood-ash.jpg',
   },
   {
-    id: 'maple',
-    name: 'Canadian Hard Maple',
-    rate: 450,
-    hex: '#E8D9B5',
-    image: 'images/swatches/wood-maple.jpg',
-  },
-  {
     id: 'whiteoak',
     name: 'American White Oak',
     rate: 470,
@@ -95,11 +74,32 @@ export const SOLID_WOOD_SPECIES = [
     image: 'images/swatches/wood-white-oak.jpg',
   },
   {
+    id: 'redoak',
+    name: 'American Red Oak',
+    rate: 310,
+    hex: '#C8975A',
+    image: 'images/swatches/wood-red-oak.jpg',
+  },
+  {
+    id: 'cherry',
+    name: 'American Cherry Wood',
+    rate: 400,
+    hex: '#8B4A35',
+    image: 'images/swatches/wood-cherry.jpg',
+  },
+  {
     id: 'walnut',
     name: 'American Black Walnut',
     rate: 650,
     hex: '#3D2B1F',
     image: 'images/swatches/wood-walnut.jpg',
+  },
+  {
+    id: 'smokedoak',
+    name: 'Smoked Red Oak',
+    rate: 375,
+    hex: '#5A4030',
+    image: 'images/swatches/wood-smoked-red-oak.jpg',
   },
 ]
 
