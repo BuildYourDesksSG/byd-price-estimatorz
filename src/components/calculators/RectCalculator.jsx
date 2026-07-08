@@ -213,8 +213,9 @@ export default function RectCalculator() {
                   }}
                   style={{
                     width: '100%',
-                    aspectRatio: '3 / 2',
-                    objectFit: 'cover',
+                    aspectRatio: '1 / 1',
+                    objectFit: 'contain',
+                    background: '#fff',
                     borderRadius: 8,
                     display: 'block',
                     marginBottom: 8,

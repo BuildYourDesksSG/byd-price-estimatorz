@@ -12,10 +12,9 @@ import {
   LSHAPE_MATERIALS,
   LSHAPE_MFC_COLOURS,
   SOLID_WOOD_SPECIES,
-  SOLID_WOOD_EDGE_STYLES,
   L2_ORIENTATIONS,
 } from '../../constants/lshapeDesk'
-import { GROMMET_HOLE_TYPES, grommetAddonPrice } from '../../constants/rectDesk'
+import { GROMMET_HOLE_TYPES, grommetAddonPrice, MDF_EDGES } from '../../constants/rectDesk'
 import { ASSEMBLY_STANDARD, ASSEMBLY_TWO_PERSON } from '../../constants/assembly'
 import {
   ACCESSORY_CABLE_TRAY,
@@ -53,7 +52,7 @@ export default function LShapeMaterialPanel({ materialKey }) {
   const [w2, setW2] = useState(clamp(60, LSHAPE_WIDTH_MIN, LSHAPE_WIDTH_MAX))
   const [orientation, setOrientation] = useState('Left')
   const [colour, setColour] = useState(colours[0].id)
-  const [edgeStyle, setEdgeStyle] = useState(SOLID_WOOD_EDGE_STYLES[0])
+  const [edgeStyle, setEdgeStyle] = useState(MDF_EDGES[0].id)
   const [holeType, setHoleType] = useState('None')
   const [position, setPosition] = useState('Middle')
   const [grommetSize, setGrommetSize] = useState('20cm')
@@ -148,7 +147,7 @@ export default function LShapeMaterialPanel({ materialKey }) {
     w2,
     orientation,
     speciesOrColourName,
-    edgeStyle: isSpecies ? edgeStyle : null,
+    edgeStyle: isSpecies ? (MDF_EDGES.find((e) => e.id === edgeStyle)?.label ?? null) : null,
     rate,
     holeType,
     position,
@@ -269,25 +268,49 @@ export default function LShapeMaterialPanel({ materialKey }) {
       {isSpecies && (
         <Card>
           <SectionLabel>Edge Style</SectionLabel>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-            {SOLID_WOOD_EDGE_STYLES.map((s) => (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 12 }}>
+            {MDF_EDGES.map((e) => (
               <div
-                key={s}
-                onClick={() => setEdgeStyle(s)}
+                key={e.id}
+                onClick={() => setEdgeStyle(e.id)}
                 style={{
                   cursor: 'pointer',
-                  padding: '8px 18px',
-                  borderRadius: 20,
-                  border: `1.5px solid ${edgeStyle === s ? T.brand : T.border}`,
-                  background: edgeStyle === s ? T.brand : T.bg,
-                  color: edgeStyle === s ? '#fff' : T.text,
-                  fontSize: 12.5,
-                  fontWeight: edgeStyle === s ? 600 : 400,
-                  transition: 'all 0.15s',
-                  fontFamily: T.font,
+                  border: `1.5px solid ${edgeStyle === e.id ? T.brand : T.border}`,
+                  background: edgeStyle === e.id ? T.brandTint : T.bg,
+                  borderRadius: 12,
+                  padding: 8,
+                  transition: 'border-color 0.15s, background 0.15s, box-shadow 0.15s',
+                  boxShadow: edgeStyle === e.id ? `0 0 0 1px ${T.brand}25` : '0 0 0 1px transparent',
                 }}
               >
-                Style {s}
+                {e.image && (
+                  <img
+                    src={e.image}
+                    alt={e.label}
+                    onError={(ev) => {
+                      ev.currentTarget.style.display = 'none'
+                    }}
+                    style={{
+                      width: '100%',
+                      aspectRatio: '1 / 1',
+                      objectFit: 'contain',
+                      background: '#fff',
+                      borderRadius: 8,
+                      display: 'block',
+                      marginBottom: 8,
+                    }}
+                  />
+                )}
+                <div
+                  style={{
+                    fontWeight: 600,
+                    fontSize: 13,
+                    textAlign: 'center',
+                    color: edgeStyle === e.id ? T.brand : T.text,
+                  }}
+                >
+                  {e.label}
+                </div>
               </div>
             ))}
           </div>

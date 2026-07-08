@@ -246,7 +246,7 @@ function LShapeSpec({ spec }) {
           l={spec.materialKey === 'solid' ? 'Wood Species' : 'Colour'}
           v={spec.speciesOrColourName}
         />
-        {spec.edgeStyle && <Row l='Edge Style' v={`Style ${spec.edgeStyle}`} />}
+        {spec.edgeStyle && <Row l='Edge Style' v={spec.edgeStyle} />}
         <Row l='Rate' v={`$${spec.rate}/m²`} />
         {spec.holeType && spec.holeType !== 'None' && (
           <Row
