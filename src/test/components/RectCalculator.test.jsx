@@ -30,8 +30,8 @@ describe('RectCalculator — default render', () => {
   it('shows edge style section by default', () => {
     render(<RectCalculator />)
     expect(screen.getByText('Edge Style')).toBeInTheDocument()
-    expect(screen.getByText('Style 01')).toBeInTheDocument()
-    expect(screen.getByText('Style 06')).toBeInTheDocument()
+    expect(screen.getByText('Waterfall\u2122 Edge')).toBeInTheDocument()
+    expect(screen.getByText('Waterfall\u2122 Curve')).toBeInTheDocument()
   })
 
   it('shows grommet hole cut-out section', () => {

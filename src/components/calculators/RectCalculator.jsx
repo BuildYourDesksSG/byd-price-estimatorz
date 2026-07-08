@@ -183,13 +183,7 @@ export default function RectCalculator() {
       {/* Edge Style */}
       <Card>
         <SectionLabel>Edge Style</SectionLabel>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
-            gap: 12,
-          }}
-        >
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
           {MDF_EDGES.map((e) => (
             <div
               key={e.id}
@@ -199,34 +193,15 @@ export default function RectCalculator() {
                 border: `1.5px solid ${edge === e.id ? T.brand : T.border}`,
                 background: edge === e.id ? T.brandTint : T.bg,
                 borderRadius: 12,
-                padding: 8,
+                padding: 14,
                 transition: 'border-color 0.15s, background 0.15s, box-shadow 0.15s',
                 boxShadow: edge === e.id ? `0 0 0 1px ${T.brand}25` : '0 0 0 1px transparent',
               }}
             >
-              {e.image && (
-                <img
-                  src={e.image}
-                  alt={e.label}
-                  onError={(ev) => {
-                    ev.currentTarget.style.display = 'none'
-                  }}
-                  style={{
-                    width: '100%',
-                    aspectRatio: '1 / 1',
-                    objectFit: 'contain',
-                    background: '#fff',
-                    borderRadius: 8,
-                    display: 'block',
-                    marginBottom: 8,
-                  }}
-                />
-              )}
               <div
                 style={{
                   fontWeight: 600,
-                  fontSize: 13,
-                  textAlign: 'center',
+                  fontSize: 13.5,
                   color: edge === e.id ? T.brand : T.text,
                 }}
               >

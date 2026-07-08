@@ -14,7 +14,7 @@ import {
   SOLID_WOOD_SPECIES,
   L2_ORIENTATIONS,
 } from '../../constants/lshapeDesk'
-import { GROMMET_HOLE_TYPES, grommetAddonPrice, MDF_EDGES } from '../../constants/rectDesk'
+import { GROMMET_HOLE_TYPES, grommetAddonPrice, WOOD_EDGE_STYLES } from '../../constants/rectDesk'
 import { ASSEMBLY_STANDARD, ASSEMBLY_TWO_PERSON } from '../../constants/assembly'
 import {
   ACCESSORY_CABLE_TRAY,
@@ -52,7 +52,7 @@ export default function LShapeMaterialPanel({ materialKey }) {
   const [w2, setW2] = useState(clamp(60, LSHAPE_WIDTH_MIN, LSHAPE_WIDTH_MAX))
   const [orientation, setOrientation] = useState('Left')
   const [colour, setColour] = useState(colours[0].id)
-  const [edgeStyle, setEdgeStyle] = useState(MDF_EDGES[0].id)
+  const [edgeStyle, setEdgeStyle] = useState(WOOD_EDGE_STYLES[0].id)
   const [holeType, setHoleType] = useState('None')
   const [position, setPosition] = useState('Middle')
   const [grommetSize, setGrommetSize] = useState('20cm')
@@ -147,7 +147,7 @@ export default function LShapeMaterialPanel({ materialKey }) {
     w2,
     orientation,
     speciesOrColourName,
-    edgeStyle: isSpecies ? (MDF_EDGES.find((e) => e.id === edgeStyle)?.label ?? null) : null,
+    edgeStyle: isSpecies ? (WOOD_EDGE_STYLES.find((e) => e.id === edgeStyle)?.label ?? null) : null,
     rate,
     holeType,
     position,
@@ -269,7 +269,7 @@ export default function LShapeMaterialPanel({ materialKey }) {
         <Card>
           <SectionLabel>Edge Style</SectionLabel>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 12 }}>
-            {MDF_EDGES.map((e) => (
+            {WOOD_EDGE_STYLES.map((e) => (
               <div
                 key={e.id}
                 onClick={() => setEdgeStyle(e.id)}
