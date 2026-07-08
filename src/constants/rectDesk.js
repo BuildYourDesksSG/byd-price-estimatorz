@@ -81,8 +81,12 @@ export const MDF_COLOURS = [
 ]
 
 export const MDF_EDGES = [
-  { id: 'ergo-slope', label: 'Waterfall\u2122 Edge' },
-  { id: 'ergo-curve', label: 'Waterfall\u2122 Curve' },
+  { id: 'style-01', label: 'Style 01', image: 'images/edges/style-01.png' },
+  { id: 'style-02', label: 'Style 02', image: 'images/edges/style-02.png' },
+  { id: 'style-03', label: 'Style 03', image: 'images/edges/style-03.png' },
+  { id: 'style-04', label: 'Style 04', image: 'images/edges/style-04.png' },
+  { id: 'style-05', label: 'Style 05', image: 'images/edges/style-05.png' },
+  { id: 'style-06', label: 'Style 06', image: 'images/edges/style-06.png' },
 ]
 
 // Grommet — Rectangular (#10: flat $19.90, except 30cm at $29.90)
