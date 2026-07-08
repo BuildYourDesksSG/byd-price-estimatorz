@@ -57,6 +57,44 @@ const PRINT_BTN = {
 // New Add-Ons (#14, #23, #24) — shared catalogue with uniform white-bg PNGs.
 const ADDONS = ADDONS_CATALOG
 
+// Small edge-profile preview shown inside each Waterfall edge card.
+function EdgeThumb({ id, active }) {
+  const stroke = active ? T.brand : T.textMute
+  const fill = active ? T.brandTint : 'transparent'
+  return (
+    <svg
+      width='100%'
+      height='46'
+      viewBox='0 0 120 46'
+      style={{ display: 'block', marginBottom: 8 }}
+      preserveAspectRatio='xMidYMid meet'
+    >
+      {id === 'ergo-curve' ? (
+        <path
+          d='M6 8 H114 V30 Q114 40 104 40 H80 C71 40 67 27 60 27 C53 27 49 40 40 40 H16 Q6 40 6 30 Z'
+          fill={fill}
+          stroke={stroke}
+          strokeWidth='2'
+        />
+      ) : (
+        <path d='M6 8 H114 V40 H6 Z' fill={fill} stroke={stroke} strokeWidth='2' />
+      )}
+      {id === 'ergo-slope' && (
+        <line
+          x1='16'
+          y1='34'
+          x2='104'
+          y2='34'
+          stroke={stroke}
+          strokeWidth='1'
+          strokeDasharray='4 3'
+          strokeOpacity='0.6'
+        />
+      )}
+    </svg>
+  )
+}
+
 export default function RectCalculator() {
   const [length, setLength] = useState(140)
   const [depth, setDepth] = useState(70)
@@ -198,10 +236,12 @@ export default function RectCalculator() {
                 boxShadow: edge === e.id ? `0 0 0 1px ${T.brand}25` : '0 0 0 1px transparent',
               }}
             >
+              <EdgeThumb id={e.id} active={edge === e.id} />
               <div
                 style={{
                   fontWeight: 600,
                   fontSize: 13.5,
+                  textAlign: 'center',
                   color: edge === e.id ? T.brand : T.text,
                 }}
               >
