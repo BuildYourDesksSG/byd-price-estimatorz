@@ -82,8 +82,8 @@ export const MDF_COLOURS = [
 
 // Custom Desk (rectangular / MDF) edge styles — text only
 export const MDF_EDGES = [
-  { id: 'ergo-slope', label: 'Waterfall\u2122 Edge' },
-  { id: 'ergo-curve', label: 'Waterfall\u2122 Curve' },
+  { id: 'ergo-slope', label: 'Waterfall\u2122 Edge', image: 'images/edges/waterfall-edge.png' },
+  { id: 'ergo-curve', label: 'Waterfall\u2122 Curve', image: 'images/edges/waterfall-curve.png' },
 ]
 
 // Solid-wood (L-Shape) edge styles — 6 photo styles

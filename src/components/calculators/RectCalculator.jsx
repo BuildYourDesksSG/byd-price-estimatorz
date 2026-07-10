@@ -58,9 +58,31 @@ const PRINT_BTN = {
 const ADDONS = ADDONS_CATALOG
 
 // Small edge-profile preview shown inside each Waterfall edge card.
-function EdgeThumb({ id, active }) {
+// When an illustration is provided, show it; otherwise fall back to the
+// original inline vector profile.
+function EdgeThumb({ id, active, image, label }) {
   const stroke = active ? T.brand : T.textMute
   const fill = active ? T.brandTint : 'transparent'
+  if (image) {
+    return (
+      <img
+        src={image}
+        alt={label ?? 'Edge style'}
+        onError={(ev) => {
+          ev.currentTarget.style.display = 'none'
+        }}
+        style={{
+          width: '100%',
+          aspectRatio: '1 / 1',
+          objectFit: 'contain',
+          background: '#fff',
+          borderRadius: 8,
+          display: 'block',
+          marginBottom: 8,
+        }}
+      />
+    )
+  }
   return (
     <svg
       width='100%'
@@ -236,7 +258,7 @@ export default function RectCalculator() {
                 boxShadow: edge === e.id ? `0 0 0 1px ${T.brand}25` : '0 0 0 1px transparent',
               }}
             >
-              <EdgeThumb id={e.id} active={edge === e.id} />
+              <EdgeThumb id={e.id} active={edge === e.id} image={e.image} label={e.label} />
               <div
                 style={{
                   fontWeight: 600,
