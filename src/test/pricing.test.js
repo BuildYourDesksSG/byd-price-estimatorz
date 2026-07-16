@@ -240,10 +240,10 @@ describe('Solid wood species rates', () => {
     expect(SOLID_WOOD_SPECIES.some((s) => s.id === 'beech')).toBe(true)
   })
 
-  it('American Red Oak is the cheapest species', () => {
+  it('European Beech is the cheapest species', () => {
     const cheapest = SOLID_WOOD_SPECIES.reduce((a, b) => (a.rate < b.rate ? a : b))
-    expect(cheapest.id).toBe('redoak')
-    expect(cheapest.rate).toBe(310)
+    expect(cheapest.id).toBe('beech')
+    expect(cheapest.rate).toBe(275)
   })
 
   it('American Black Walnut is the most expensive species', () => {
