@@ -112,3 +112,27 @@ describe('RectCalculator — frame selection', () => {
     })
   })
 })
+
+// Solid Wood category (change request): table top is priced per species,
+// e.g. European Beech at $275/m². 0.98 m² × $275 = $269.50 + $379 frame = $648.50
+describe('RectCalculator — Solid Wood category', () => {
+  it('offers MDF and Solid Wood category tabs', () => {
+    render(<RectCalculator />)
+    expect(screen.getByText('MDF')).toBeInTheDocument()
+    expect(screen.getByText('Solid Wood')).toBeInTheDocument()
+  })
+
+  it('shows wood species after switching to Solid Wood', () => {
+    render(<RectCalculator />)
+    fireEvent.click(screen.getByText('Solid Wood'))
+    expect(screen.getByText('Wood Species')).toBeInTheDocument()
+    expect(screen.getByText('European Beech')).toBeInTheDocument()
+  })
+
+  it('prices the table top using the species rate, not the flat MDF rate', () => {
+    render(<RectCalculator />)
+    fireEvent.click(screen.getByText('Solid Wood'))
+    expect(screen.getByText(/× \$275\/m²/)).toBeInTheDocument()
+    expect(screen.getByText('$648.50')).toBeInTheDocument()
+  })
+})

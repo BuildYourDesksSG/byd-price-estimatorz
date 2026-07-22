@@ -1,3 +1,18 @@
+// Material categories for Build Your Desks™ (Rectangular).
+// Mirrors LSHAPE_MATERIALS so both calculators share the same tab pattern.
+export const RECT_MATERIALS = {
+  mdf: {
+    label: 'MDF',
+    tag: 'Standard',
+    rateType: 'flat',
+  },
+  solid: {
+    label: 'Solid Wood',
+    tag: 'Side-Joint Construction',
+    rateType: 'species',
+  },
+}
+
 export const RECT_FRAMES = {
   single: { name: 'Build Your Desks\u2122 Lite', price: 279, maxLen: 160 },
   dual: { name: 'Build Your Desks\u2122 Pro', price: 379, maxLen: 180 },
