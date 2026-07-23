@@ -1,6 +1,6 @@
 import { TOP_RATE } from './assembly'
 
-export const LSHAPE_FRAME_PRICE = 609
+export const LSHAPE_FRAME_PRICE = 599
 export const LSHAPE_L1_MIN = 120
 export const LSHAPE_L2_MIN = 90
 export const LSHAPE_L2_MAX = 120
